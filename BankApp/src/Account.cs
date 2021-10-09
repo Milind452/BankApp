@@ -8,11 +8,13 @@ namespace BankApp
 {
     abstract class Account
     {
-        private string accountNumber
+        private string _accountNumber;
+        public string AccountNumber
         {
-            get => accountNumber;
-            set => accountNumber = value;
+            get => _accountNumber;
+            set => _accountNumber = value;
         }
+        
         protected abstract string type
         {
             get;
@@ -22,10 +24,11 @@ namespace BankApp
         {
             get;
         }
-        private double balance
+        private double _balance;
+        public double Balance
         {
-            get => balance;
-            set => balance = value;
+            get => _balance;
+            set => _balance = value;
         }
     }
 }
