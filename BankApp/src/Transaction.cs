@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace BankApp
 {
-    class Transaction
+    class Transaction : ITransaction
     {
+        public void Deposit(double amount)
+        {
+
+        }
+
+        public void Withdrawal(double amount)
+        {
+
+        }
+
+        public double checkBalance()
+        {
+            return 0.0;
+        }
     }
 }
