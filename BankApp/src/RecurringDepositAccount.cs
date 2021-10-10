@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace BankApp
 {
-    class RecurringDepositAccount
+    class RecurringDepositAccount : Account
     {
+        public RecurringDepositAccount()
+        {
+            Rate = 0.05;
+        }
+
+        public override void Display()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

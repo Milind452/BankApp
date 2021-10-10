@@ -21,17 +21,21 @@ namespace BankApp
             get => _type;
             set => _type = value;
         }
+
         private double _rate;
-        public abstract double Rate
+        public double Rate
         {
-            get;
-            set;
+            get => _rate;
+            set => _rate = value;
         }
-        private double _balance;
+
+        private double _balance;    
         public double Balance
         {
             get => _balance;
             set => _balance = value;
         }
+
+        public abstract void Display();
     }
 }
