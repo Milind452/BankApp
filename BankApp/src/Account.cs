@@ -14,15 +14,18 @@ namespace BankApp
             get => _accountNumber;
             set => _accountNumber = value;
         }
-        
-        protected abstract string type
+
+        private string _type;
+        public string Type
+        {
+            get => _type;
+            set => _type = value;
+        }
+        private double _rate;
+        public abstract double Rate
         {
             get;
             set;
-        }
-        protected abstract double rate
-        {
-            get;
         }
         private double _balance;
         public double Balance
