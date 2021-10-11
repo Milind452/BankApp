@@ -34,15 +34,18 @@ namespace BankApp
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Enter your choice: ");
             Console.ForegroundColor = ConsoleColor.Blue;
-            int ch = Convert.ToInt32(Console.ReadLine());
+            int accountType = Convert.ToInt32(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
 
             Console.WriteLine(username);
             Console.WriteLine(password);
-            Console.WriteLine(ch == 1 ? "Savings" : ch == 2 ? "Recurring" : "Fixed");
+            Console.WriteLine(accountType == 1 ? "Savings" : accountType == 2 ? "Recurring" : "Fixed");
             // CreateUser(username, password, accountType);
             Console.WriteLine();
+
+            User user = new User(username, password, accountType);
+            user.Dashboard();
         }
 
         static void Main(string[] args)
