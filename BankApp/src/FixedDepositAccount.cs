@@ -8,7 +8,8 @@ namespace BankApp
 {
     class FixedDepositAccount : Account
     {
-        public FixedDepositAccount()
+        public FixedDepositAccount(string accountNumber, string type, double balance) :
+            base(accountNumber, type, balance)
         {
             Rate = 0.06;
         }

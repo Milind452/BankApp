@@ -8,10 +8,11 @@ namespace BankApp
 {
     class SavingsAccount : Account
     {
-        public SavingsAccount()
+        public SavingsAccount(string accountNumber, string type, double balance) : 
+            base(accountNumber, type, balance)
         {
             Rate = 0.04;
-        }
+        }   
 
         public override void Display()
         {

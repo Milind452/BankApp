@@ -26,11 +26,29 @@ namespace BankApp
             get => _accountType;
             set => _accountType = value;
         }
+        private Account _account;
+        public Account Account
+        {
+            get => _account;
+            set => _account = value;
+        }
         public User(string username, string password, int accountType)
         {
             this._username = username;
             this._password = password;
             this._accountType = accountType;
+            if(this._accountType == 0)
+            {
+                this._account = new SavingsAccount("1010", "savings", 0.0);
+            }
+            else if (this._accountType == 1)
+            {
+                this._account = new RecurringDepositAccount("1010", "recurring", 0.0);
+            }
+            else
+            {
+                this._account = new FixedDepositAccount("1010", "fixed", 0.0);
+            }
         }
         public void Dashboard()
         {
@@ -62,8 +80,11 @@ namespace BankApp
                     case 4:
                         break;
                     case 5:
+                        Console.WriteLine("Exiting...");
                         break;
                     default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("# Invalid entry. Try again.\n");
                         break;
                 }
             } while (ch != 5);

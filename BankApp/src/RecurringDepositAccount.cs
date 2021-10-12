@@ -8,7 +8,8 @@ namespace BankApp
 {
     class RecurringDepositAccount : Account
     {
-        public RecurringDepositAccount()
+        public RecurringDepositAccount(string accountNumber, string type, double balance) : 
+            base(accountNumber, type, balance)
         {
             Rate = 0.05;
         }

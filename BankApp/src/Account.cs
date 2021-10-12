@@ -37,5 +37,12 @@ namespace BankApp
         }
 
         public abstract void Display();
+
+        public Account(string accountNumber, string type, double balance)
+        {
+            this._accountNumber = accountNumber;
+            this._type = type;
+            this._balance = balance;
+        }
     }
 }
