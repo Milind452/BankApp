@@ -86,7 +86,9 @@ namespace BankApp
                         Console.WriteLine();
                         break;
                     case 3:
-                        Console.WriteLine(Account.Transaction.checkBalance());
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine(Account.Balance + "\n");
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         break;
                     case 4:
                         break;
