@@ -8,8 +8,8 @@ namespace BankApp
 {
     interface ITransaction
     {
-        public void Deposit(double amount);
-        public void Withdrawal(double amount);
+        public double Deposit();
+        public void Withdrawal();
         public double checkBalance();
     }
 }

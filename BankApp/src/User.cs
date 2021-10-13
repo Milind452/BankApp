@@ -72,6 +72,11 @@ namespace BankApp
                 switch (ch)
                 {
                     case 1:
+                        Account.Balance += Account.Transaction.Deposit();
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("Account Balance = " + Account.Balance);
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine();
                         break;
                     case 2:
                         break;

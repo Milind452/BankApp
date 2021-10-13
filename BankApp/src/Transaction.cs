@@ -8,12 +8,19 @@ namespace BankApp
 {
     class Transaction : ITransaction
     {
-        public void Deposit(double amount)
+        public double Deposit()
         {
-
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("###Deposit###");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Enter deposit amount: ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            double DepositAmount = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+            return DepositAmount;
         }
 
-        public void Withdrawal(double amount)
+        public void Withdrawal()
         {
 
         }
