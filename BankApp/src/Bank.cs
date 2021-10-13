@@ -38,9 +38,9 @@ namespace BankApp
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
 
-            Console.WriteLine(username);
-            Console.WriteLine(password);
-            Console.WriteLine(accountType == 1 ? "Savings" : accountType == 2 ? "Recurring" : "Fixed");
+            //Console.WriteLine(username);
+            //Console.WriteLine(password);
+            //Console.WriteLine(accountType == 1 ? "Savings" : accountType == 2 ? "Recurring" : "Fixed");
             // CreateUser(username, password, accountType);
             Console.WriteLine();
 
