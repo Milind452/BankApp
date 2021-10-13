@@ -35,6 +35,12 @@ namespace BankApp
             get => _balance;
             set => _balance = value;
         }
+        private Transaction _transaction;
+        public Transaction Transaction
+        {
+            get => _transaction;
+            set => _transaction = value;
+        }
 
         public abstract void Display();
 
@@ -43,6 +49,7 @@ namespace BankApp
             this._accountNumber = accountNumber;
             this._type = type;
             this._balance = balance;
+            this._transaction = new Transaction();
         }
     }
 }

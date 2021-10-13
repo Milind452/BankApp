@@ -76,6 +76,7 @@ namespace BankApp
                     case 2:
                         break;
                     case 3:
+                        Console.WriteLine(Account.Transaction.checkBalance());
                         break;
                     case 4:
                         break;
