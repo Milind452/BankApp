@@ -20,9 +20,16 @@ namespace BankApp
             return DepositAmount;
         }
 
-        public void Withdrawal()
+        public double Withdrawal()
         {
-
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("###Withdrawal###");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Enter withdrawal amount: ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            double WithdrawalAmount = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+            return WithdrawalAmount;
         }
 
         public double checkBalance()

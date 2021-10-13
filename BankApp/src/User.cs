@@ -79,6 +79,11 @@ namespace BankApp
                         Console.WriteLine();
                         break;
                     case 2:
+                        Account.Balance -= Account.Transaction.Withdrawal();
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("Account Balance = " + Account.Balance);
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine();
                         break;
                     case 3:
                         Console.WriteLine(Account.Transaction.checkBalance());
